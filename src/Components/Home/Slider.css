@@ -1,0 +1,8 @@
+.slider {
+    margin: 10px auto;
+}
+
+.slider img{
+    height: 40vh;
+    width: 100%;
+}

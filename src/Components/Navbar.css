@@ -1,0 +1,32 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 5px;
+    background-color: #f7f7f7;
+}
+
+.nav-logo img{
+    width: 50px;
+}
+
+.nav-filter input{
+    border: 2px solid black;
+    padding: 10px 5px;
+    width: 20vw;
+}
+
+.nav-search input{
+    border: 2px solid black;
+    padding: 10px 5px;
+    width: 45vw;
+}
+
+.sell button, .login button{
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
