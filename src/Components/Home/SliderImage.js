@@ -4,6 +4,8 @@ import './SliderImage.css'
 
 const SliderImage = () => {
     return (
+        <div className='top'>
+            <span>Based on your latest search</span>
         <div className='container_product'>
             {Object.keys(Api).map((product, i)=>{
                 const apiItem = Api[product];
@@ -20,6 +22,7 @@ const SliderImage = () => {
                 )
             })}
             
+        </div>
         </div>
     )
 }

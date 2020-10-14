@@ -4,6 +4,8 @@ import './FeaturedComponent.css'
 
 const FeaturedComponent = () => {
     return (
+        <div className='top'>
+            <span>FRESH REOMMENDATIONS</span>
         <div className='container-product'>
             {Object.keys(Api).map((product, i)=>{
                 const apiItem = Api[product];
@@ -20,6 +22,7 @@ const FeaturedComponent = () => {
                 )
             })}
             
+        </div>
         </div>
     )
 }

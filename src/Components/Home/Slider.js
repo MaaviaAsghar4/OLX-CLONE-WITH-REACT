@@ -1,5 +1,5 @@
 import React from 'react'
-import Slider2 from '../../images/OLX-Logo.png'
+import Slider2 from '../../images/hero_bg_pk.jpg'
 import './Slider.css'
 
 const Slider = () => {

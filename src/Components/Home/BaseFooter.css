@@ -1,0 +1,21 @@
+.ft-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #e2dfdf;
+    padding: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+.ft-foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #002f34;
+    color: #f7f7f7;
+    padding-left: 20px;
+    padding-right: 20px;
+}

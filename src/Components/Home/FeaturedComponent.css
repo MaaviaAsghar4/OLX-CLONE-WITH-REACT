@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 22%;
+    width: 21%;
     border: 1px solid rgb(212, 208, 208);
     border-radius: 0.3rem;
     margin: 20px 20px;
@@ -26,11 +26,23 @@
 }
 
 .card-text p{
-    padding: 0 60px !important;
+    padding: 0 50px !important;
+}
+
+@media (max-width: 920px) {
+    .featured-box{
+        width: 30%;
+    }
 }
 
 @media (max-width: 768px) {
     .featured-box{
         width: 40%;
+    }
+}
+
+@media (max-width: 450px) {
+    .featured-box{
+        width: 70%;
     }
 }
