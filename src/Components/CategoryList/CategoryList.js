@@ -1,11 +1,16 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
+import Categoryhead from './Categoryhead';
+import Filter from './Filter';
+import Product from './Product';
 
 const CategoryList = () => {
-    const { id } = useParams();
+    // const { id } = useParams();
     return (
         <div>
-            Hello {id}
+            <Categoryhead />
+            <Filter />
+            <Product />
         </div>
     )
 }

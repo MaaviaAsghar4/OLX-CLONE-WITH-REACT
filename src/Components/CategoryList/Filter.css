@@ -1,0 +1,11 @@
+.sidebar{
+    float: left;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+    .sidebar{
+        display: none;
+    }
+}

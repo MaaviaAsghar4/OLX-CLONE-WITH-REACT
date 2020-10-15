@@ -19,7 +19,7 @@ const Categories = () => {
                 {List.lists.map((list, i) => {
                     console.log(list)
                     return (
-                        <Link className={isState ? 'nav-links' : 'nav-links open'} to={list}>{list}</Link>
+                        <Link key={i} className={isState ? 'nav-links' : 'nav-links open'} to={list}>{list}</Link>
                     )
                 })}
             </div>
