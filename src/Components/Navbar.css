@@ -14,12 +14,23 @@
     border: 2px solid black;
     padding: 10px 5px;
     width: 20vw;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    background-image: url('../images/search--v1.png');
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: 5px;
+    padding-left: 35px;
+    cursor: pointer;
 }
 
 .nav-search input{
     border: 2px solid black;
     padding: 10px 5px;
     width: 45vw;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
 }
 
 .sell button, .login button{
@@ -29,4 +40,21 @@
     text-decoration: underline;
     font-size: 0.9rem;
     cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .nav-filter input{
+        width: 40vw;
+    }
+
+    .nav-search input{
+        width: 10vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-filter, .nav-search{
+        display: none;
+    }
 }

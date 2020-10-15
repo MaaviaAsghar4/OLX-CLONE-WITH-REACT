@@ -8,9 +8,9 @@ import Navbar from './Components/Navbar'
 function App() {
   return (
     <div>
-      <Navbar />
       <Router>
-      <Categories />
+        <Navbar />
+        <Categories />
         <Routing />
       </Router>
     </div>

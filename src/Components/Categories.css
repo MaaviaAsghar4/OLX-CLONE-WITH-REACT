@@ -1,6 +1,35 @@
-.categories button{
-    border: none;
-    background: transparent;
+.nav-links{
+    text-decoration: none;
+    color: black;
+    padding-right: 5px;
     font-size: 0.9rem;
+}
+
+
+
+.category-list{
+    display: flex;
+    align-items: center;
+}
+
+.category-list p{
+    font-size: 0.9rem;
+    padding-right: 5px;
+    padding-left: 5px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .category-list {
+        flex-direction: column;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .nav-links.open{
+        display: block;
+        margin-top: 10px;
+    }
 }

@@ -1,9 +1,15 @@
 .ft-list{
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: space-evenly;
     background-color: #e2dfdf;
     padding: 20px;
+}
+
+.ft-list li{
+    color: rgb(91,121,129);
+    font-size: 0.8rem;
+    margin-top: 7px;
 }
 
 li{
@@ -18,4 +24,18 @@ li{
     color: #f7f7f7;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.ft-foot p{
+    font-size: 0.9rem;
+}
+
+.ft-foot p span {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .ft-foot, .ft-list{
+        flex-direction: column;
+    }
 }
