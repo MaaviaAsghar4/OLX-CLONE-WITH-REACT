@@ -1,12 +1,22 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+import ProductDetail from './ProductDetail'
+import UserInfo from './UserInfo'
+import './ProductItem.css'
 
 const ProductItem = () => {
-    const { product } = useParams()
-    console.log(product)
+    const { id } = useParams()
+    console.log(id)
     return (
         <div>
-            {product}
+            <div className='breadcrumb'>
+                <span>{<Link to='/'>Home</Link>}/</span>
+                <span><Link to={{ id }}>{id}</Link></span>
+            </div>
+            <div className='product-info'>
+                <ProductDetail />
+                <UserInfo />
+            </div>
         </div>
     )
 }

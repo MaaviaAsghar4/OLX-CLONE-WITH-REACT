@@ -1,0 +1,9 @@
+.product-info{
+    display: flex;
+}
+
+@media (max-width: 1023px) {
+    .product-info{
+        flex-direction: column;
+    }
+}
