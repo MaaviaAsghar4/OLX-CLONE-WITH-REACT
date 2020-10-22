@@ -13,7 +13,7 @@ const FeaturedComponent = () => {
                     const apiItem = Api[product];
                     return (
                         <div className='featured-box' key={i}>
-                            <Link to={`/product/${apiItem.name}`}>
+                            <Link to={`/product/${product}`}>
                                 <img src={apiItem.img} height={200} alt='product' />
                                 <p className='left-content' style={{ fontWeight: 'bold', color: 'black' }}>Rs. {apiItem.price}</p>
                                 <p className='left-content'>{apiItem.name}</p>

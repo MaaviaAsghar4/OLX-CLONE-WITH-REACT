@@ -1,3 +1,60 @@
 .user-detail{
-    width: 40%;
+    width: 28%;
+    margin-top: 30px;
+    /* margin-right: auto; */
+    margin-left: -50px; 
+}
+
+.user-price, .user-description, .user-location{
+    border: 1px solid rgba(212,208,208,1);
+    border-radius: 0.3rem;
+    width: 88%;
+    padding: 10px 10px;
+    width: 110%;
+}
+
+.user-price{
+    color: rgb(134 132 146);
+}
+
+.user-description{
+    font-weight: bold;
+}
+
+.user-description button{
+    width: 100%;
+    color: #f7f7f7;
+    background-color: #002f34;
+    border-radius: 4px;
+    border: 5px solid #002f34;
+    padding: 5px 7px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.user-description button:hover{
+    background-color: #f7f7f7;
+    color: #002f34;
+
+}
+
+.user-location p{
+    color: rgb(134 132 146);
+}
+
+.user-id{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .user-detail{
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .user-price, .user-description, .user-location{
+        width: 88%;
+    }
 }
