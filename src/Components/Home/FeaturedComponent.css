@@ -18,7 +18,7 @@
     padding: 0 20px;
     margin-top: 0 !important; */
     text-align: start;
-    margin-left: 15%;
+    /* padding-left: 2%; */
 }
 
 .container-product{
@@ -30,11 +30,12 @@
 .card-text{
     display: flex;
     color: rgba(0,47,52,.64);
+    justify-content: space-between;
 }
 
-.card-text p{
+/* .card-text p{
     padding: 0 50px !important;
-}
+} */
 
 @media (max-width: 920px) {
     .featured-box{

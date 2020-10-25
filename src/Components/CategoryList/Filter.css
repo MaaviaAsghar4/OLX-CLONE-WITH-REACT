@@ -5,6 +5,10 @@
     color: #002f34;
 }
 
+/* .sidebar.insert{
+    width: -300px;
+} */
+
 .filter-bar, .sidebar-category, .sidebar-location, .sidebar-price{
     padding-left: 20px;
     font-size: 0.9rem;
@@ -37,7 +41,7 @@
 }
 
 .sidebar-input button{
-    background-color: rgba(0,47,52,.64);
+    background-color: rgba(0, 21, 24, 0.64);
     color: #f7f7f7;
     padding: 10px 15px;
     font-size: 1rem;
@@ -53,6 +57,21 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
   }
+
+@media (max-width: 768px) {
+    .sidebar{
+        width: 200px;
+    }
+
+    .sidebar-input input{
+        /* flex-direction: column; */
+        width: 30px;
+    }
+
+    .sidebar-input button{
+        font-size: 0.8rem;
+    }
+}
 
 @media (max-width: 576px) {
     .sidebar{
