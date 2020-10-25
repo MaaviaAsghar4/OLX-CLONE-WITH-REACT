@@ -13,7 +13,7 @@ const ProductDetail = () => {
             <div>
                 <div className='product-img'>
                     <img src={ApiItem.img} alt={ApiItem.name} />
-                </div>
+                </div> 
                 <div className='product-list'>
                     <img src={ApiItem.img} alt={ApiItem.name} height={150} />
                     <img src={ApiItem.img} alt={ApiItem.name} height={150} />

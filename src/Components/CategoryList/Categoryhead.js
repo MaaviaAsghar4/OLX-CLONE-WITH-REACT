@@ -6,7 +6,7 @@ import './Categoryhead.css'
 const Categoryhead = () => {
     const { id } = useParams();
     return (
-        <div>
+        <div> 
             <div className='trending'>
                 <p>
                     <strong>Popular Searches:</strong>

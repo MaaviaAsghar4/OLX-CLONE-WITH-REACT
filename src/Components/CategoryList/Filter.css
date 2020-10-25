@@ -2,7 +2,57 @@
     float: left;
     width: 300px;
     margin-bottom: 20px;
+    color: #002f34;
 }
+
+.filter-bar, .sidebar-category, .sidebar-location, .sidebar-price{
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.pg-name, .sidebar-header {
+    padding-left: 30px !important;
+    color: rgba(0,47,52,.64);
+}
+
+.pg-list, .sidebar-location p{
+    padding-left: 45px;
+    color: rgba(0,47,52,.64);
+}
+
+.sidebar-input{
+    display: flex;
+    margin-left: 20px;
+}
+
+.sidebar-input input{
+    width: 50px;
+    border-bottom: 2px solid rgba(0,47,52,.64) !important;
+    background-color: #f7f7f7;
+    border: none;
+    margin-right: 10px;
+    font-size: 1rem;
+    padding: 8px 10px;
+    width: 80px;
+}
+
+.sidebar-input button{
+    background-color: rgba(0,47,52,.64);
+    color: #f7f7f7;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
 
 @media (max-width: 576px) {
     .sidebar{

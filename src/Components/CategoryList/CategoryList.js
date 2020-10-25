@@ -7,7 +7,7 @@ import Product from './Product';
 const CategoryList = () => {
     // const { id } = useParams();
     return (
-        <div>
+        <div> 
             <Categoryhead />
             <Filter />
             <Product />

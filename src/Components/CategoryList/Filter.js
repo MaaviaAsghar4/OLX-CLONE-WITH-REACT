@@ -8,20 +8,20 @@ const Filter = () => {
 
     return (
         <div className='sidebar'>
-            <div>
+            <div className='filter-bar'>
                 <h3>Filters</h3>
                 <hr />
             </div>
-            <div>
+            <div className='sidebar-category'>
                 <h3>CATEGORIES</h3>
-                <p>{id}</p>
-                <p>{id} : 1</p>
-                <p>{id} : 2</p>
+                <p className='pg-name'>{id}</p>
+                <p className='pg-list'>{id} : 1</p>
+                <p className='pg-list'>{id} : 2</p>
                 <hr />
             </div>
-            <div>
+            <div className='sidebar-location'>
                 <h3>LOCATIONS</h3>
-                <p>Pakistan</p>
+                <p className='sidebar-header'>Pakistan</p>
                 <p>Punjab (1234)</p>
                 <p>Sindh (1234)</p>
                 <p>Khyber Pakhtunkhwa (1234)</p>
@@ -30,11 +30,13 @@ const Filter = () => {
                 <p>View more</p>
                 <hr />
             </div>
-            <div>
+            <div className='sidebar-price'>
                 <h3>PRICE</h3>
-                <input type='number' />
-                <input type='number' />
-                <button> ) </button>
+                <div className='sidebar-input' >
+                    <input type='number' placeholder="Min"/>
+                    <input type='number' placeholder="Max"/>
+                    <button>{'>'}</button>
+                </div>
             </div>
         </div>
     )

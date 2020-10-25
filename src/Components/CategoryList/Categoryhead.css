@@ -1,5 +1,6 @@
 .trending{
     margin-left: 10px;
+    color: #002f34;
 }
 
 .trending p{
@@ -13,6 +14,7 @@
 
 .breadcrumb{
     margin-left: 10px;
+    color: #002f34;
     font-size: 0.9rem;
 }
 
@@ -26,5 +28,6 @@
 }
 
 .category-header{
+    color: #002f34;
     margin-left: 10px;
 }

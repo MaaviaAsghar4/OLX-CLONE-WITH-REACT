@@ -7,7 +7,7 @@ const Categories = () => {
     let [isState, setState] = useState(true);
     let display = () =>{
         setState(!isState)
-    }
+    } 
 
     // console.log(List.lists[0])
     return (

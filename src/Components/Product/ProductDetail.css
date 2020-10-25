@@ -23,6 +23,11 @@
     padding: 10px 10px;
 }
 
+.product-list img{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
 .product-detail{
     border-bottom: 5px solid  rgba(212,208,208,1);
 }
