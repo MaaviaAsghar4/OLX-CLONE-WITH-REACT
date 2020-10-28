@@ -1,10 +1,12 @@
 import React from 'react'
-import Api from '../Api/Api.json'
+// import Api from '../Api/Api.json'
 import { useParams, Link } from 'react-router-dom'
 import './Product.css'
+import { connect } from 'react-redux'
 
-const Product = () => {
+const Product = (props) => {
     const { id } = useParams();
+    let dataApi = props.data
     return (
         <div className='product-sidebar'>
             <div>
@@ -21,8 +23,8 @@ const Product = () => {
                 </div>
                 <div>
                     <div className='product-display'>
-                        {Object.keys(Api).map((product, i) => {
-                            const apiItem = Api[product];
+                        {Object.keys(dataApi).map((product, i) => {
+                            const apiItem = dataApi[product];
                             return (
                                 <div className='featured-display' key={i}>
                                     <Link to={`/product/${product}`}>
@@ -44,4 +46,8 @@ const Product = () => {
     )
 }
 
-export default Product
+const mapStateToProps = state =>({
+    data: state.products.data
+})
+
+export default connect(mapStateToProps,null)(Product)

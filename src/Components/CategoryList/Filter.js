@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 
 const Filter = () => {
     const { id } = useParams();
-    console.log(id)
+    // console.log(id)
 
     return (
         <div className='sidebar'>

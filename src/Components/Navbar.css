@@ -21,7 +21,6 @@
     background-repeat: no-repeat;
     background-position: 5px;
     padding-left: 35px;
-    cursor: pointer;
 }
 
 .nav-search input{
@@ -30,7 +29,6 @@
     width: 45vw;
     font-size: 1rem;
     border-radius: 0.3rem;
-    cursor: pointer;
 }
 
 .sell button, .login button{

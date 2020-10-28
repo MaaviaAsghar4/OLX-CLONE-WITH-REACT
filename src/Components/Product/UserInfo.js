@@ -1,11 +1,13 @@
 import React from 'react'
 import './UserInfo.css'
-import Product from '../Api/Api.json'
+// import Product from '../Api/Api.json'
 import { useParams } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-const UserInfo = () => {
+const UserInfo = (props) => {
+    const dataApi = props.data
     const { id } = useParams();
-    const ApiItem = Product[id];
+    const ApiItem = dataApi[id];
     return (
         <div className='user-detail'>
             <div className='user-price'>
@@ -27,4 +29,8 @@ const UserInfo = () => {
     )
 }
 
-export default UserInfo
+const mapStateToProps = state => ({
+    data: state.products.data
+})
+
+export default connect(mapStateToProps, null)(UserInfo)

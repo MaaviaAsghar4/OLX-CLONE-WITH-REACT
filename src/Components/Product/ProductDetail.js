@@ -1,11 +1,13 @@
 import React from 'react'
 import './ProductDetail.css'
-import Product from '../Api/Api.json'
+// import Product from '../Api/Api.json'
 import { useParams } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-const ProductDetail = () => {
+const ProductDetail = (props) => {
+    const dataApi = props.data
     const { id } = useParams();
-    const ApiItem = Product[id];
+    const ApiItem = dataApi[id];
 
 
     return (
@@ -13,7 +15,7 @@ const ProductDetail = () => {
             <div>
                 <div className='product-img'>
                     <img src={ApiItem.img} alt={ApiItem.name} />
-                </div> 
+                </div>
                 <div className='product-list'>
                     <img src={ApiItem.img} alt={ApiItem.name} height={150} />
                     <img src={ApiItem.img} alt={ApiItem.name} height={150} />
@@ -50,4 +52,8 @@ const ProductDetail = () => {
     )
 }
 
-export default ProductDetail 
+const mapStateToProps = state => ({
+    data: state.products.data
+})
+
+export default connect(mapStateToProps, null)(ProductDetail) 

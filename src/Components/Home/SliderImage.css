@@ -5,8 +5,15 @@
     border: 1px solid rgb(212, 208, 208);
     border-radius: 0.3rem;
     margin: 20px 20px;
+    height: fit-content;
     background-color: #fff;
-    padding-right: 20px;
+    /* width: 23%; */
+    /* padding-right: 20px; */
+}
+
+
+.featured_box a{
+    text-decoration: none;
 }
 
 .top{
@@ -21,9 +28,10 @@
 }
 
 .left_content{
-    margin-right: auto !important;
+    /* margin-right: auto !important; */
     padding: 0px 10px;
     margin-top: 0px !important;
+    text-align: left;
 }
 
 .container_product{
@@ -34,7 +42,7 @@
     border-radius: 0.3rem;
     margin: 0 auto;
     background-color: #ebeeef;
-    height: 300px;
+    height: 350px;
     padding-right: 20px;
     scrollbar-width: none;
 }
@@ -47,11 +55,13 @@
     display: flex;
     color: rgba(0,47,52,.64);
     margin-top: 0 !important;
+    padding: 0 5px;
+    justify-content: space-between;
 }
 
-.card_text p{
+/* .card_text p{
     padding: 0 60px !important;
-}
+} */
 
 @media (max-width: 768px) {
     .featured_box{
