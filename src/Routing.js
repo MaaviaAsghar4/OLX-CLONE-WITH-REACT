@@ -3,12 +3,14 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './Components/Home/Home'
 import CategoryList from './Components/CategoryList/CategoryList'
 import ProductItem from './Components/Product/ProductItem';
+import MainAd from './Components/AdCreator/MainAd';
 
 const Routing = () => {
     return (
         <div>
             <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path='/post' element={<MainAd />} />
                 <Route path='/:id' element={<CategoryList />} />
                 <Route path='/product/:id' element={<ProductItem />} />
                 {/* <Route path='/' element={<Cars />} />

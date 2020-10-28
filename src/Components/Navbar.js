@@ -19,7 +19,7 @@ const Navbar = () => {
                 <button>Login</button>
             </div>
             <div className='sell'>
-                <button>SELL</button>
+                <Link to='/post'>SELL</Link>
             </div>
         </div>
     )
