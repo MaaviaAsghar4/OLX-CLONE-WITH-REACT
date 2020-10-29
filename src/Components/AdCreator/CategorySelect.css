@@ -1,0 +1,32 @@
+.category-container{
+    border: 1px solid #cdd5d7;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 20px;
+    text-align: start;
+    border-radius: 0.7rem;
+}
+
+.category-container span{
+    color: #002f34;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.list-container{
+    margin-top: 20px;
+}
+
+.list-element{
+    box-sizing: border-box;
+    border: 1px solid #cdd5d7;
+    width: 100%;
+    padding: 15px 10px 15px 10px;
+    cursor: pointer;
+    color: rgba(0,47,52,.64);
+}
+
+.list-element:hover{
+    background-color: #cdd5d7;
+    color: #002f34;
+}
