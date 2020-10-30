@@ -10,6 +10,6 @@ const categoryState = {
     ]
 }
 
-export default (state = categoryState) => {
+export default (state = categoryState,action) => {
     return state
 }

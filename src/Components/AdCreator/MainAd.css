@@ -4,14 +4,13 @@
 
 .next{
     border: 2px solid #002f34;
-    margin-top: 20px;
+    margin: 20px auto;
     color: #f7f7f7;
     background-color: #002f34;
     padding: 10px 50px;
     font-size: 1.2rem;
     border-radius: 0.7rem;
     cursor: pointer;
-    margin-left: 40%;
 }
 
 .next:hover{
@@ -21,14 +20,13 @@
 
 .previous{
     border: 2px solid #002f34;
-    margin-top: 20px;
+    margin: 20px auto;
     color: #f7f7f7;
     background-color: #002f34;
     padding: 10px 50px;
     font-size: 1.2rem;
     border-radius: 0.7rem;
     cursor: pointer;
-    margin-left: 40%;
 }
 
 .previous:hover{
@@ -38,7 +36,7 @@
 
 .submit{
     border: 2px solid #002f34;
-    margin-top: 20px;
+    margin: 20px auto;
     color: #002f34;
     background-color: #f7f7f7;
     padding: 10px 50px;
@@ -51,4 +49,16 @@
 .submit:hover{
     color: #f7f7f7;
     background-color: #002f34;
+}
+
+.form-btn{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .next, .previous, .submit{
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
 }

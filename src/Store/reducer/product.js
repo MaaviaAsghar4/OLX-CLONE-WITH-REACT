@@ -78,6 +78,15 @@ const homeState = {
 }
 
 
-export default (state = homeState) => {
-    return state
+export default (state = homeState, action) => {
+    switch (action.type) {
+        case "SETDATA":
+            return ({
+                ...state,
+                data: {...state.data, data: action.data}
+            })
+
+        default:
+            return state
+    }
 }
