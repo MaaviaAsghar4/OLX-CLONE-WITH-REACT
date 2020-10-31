@@ -36,30 +36,37 @@ const MainAd = (props) => {
     }
 
     let handleBrand = e => {
+        e.preventDefault()
         setBrand(e.target.value)
     }
 
     let handleuser = e => {
+        e.preventDefault()
         setuser(e.target.value)
     }
 
     let handleprice = e => {
+        e.preventDefault()
         setprice(e.target.value)
     }
 
     let handledescription = e => {
+        e.preventDefault()
         setdescription(e.target.value)
     }
 
     let handlenumber = e => {
+        e.preventDefault()
         setnumber(e.target.value)
     }
 
     let handlename = e => {
+        e.preventDefault()
         setname(e.target.value)
     }
 
     let handlecity = e => {
+        e.preventDefault()
         setcity(e.target.value)
     }
 
@@ -67,61 +74,52 @@ const MainAd = (props) => {
         setimg(URL.createObjectURL(file))
     }
 
-    let adProduct =  {
-            tag,
-            brand,
-            price,
-            number,
-            img,
-            name,
-            description,
-            condition,
-            city,
-            user
-        }
-        console.log(img);
-    const FormSteps = () => {
-        if (state === 1) {
-            return (
-                <CategorySelect
-                    handleTag={handleTag}
-                    nextForm={nextForm}
-                />
-            )
-        }
-        if (state === 2) {
-            return (
-                <Form
-                    prevForm={prevForm}
-                    handleCondition={handleCondition}
-                    handleprice={handleprice}
-                    handleBrand={handleBrand}
-                    handleuser={handleuser}
-                    handlecity={handlecity}
-                    handlenumber={handlenumber}
-                    handlename={handlename}
-                    handledescription={handledescription}
-                    handleFile={handleFile}
-                    brand={brand}
-                    user={user}
-                    description={description}
-                    tag={tag}
-                    price={price}
-                    city={city}
-                    number={number}
-                    name={name}
-                    condition={condition}
-                />
-            )
-        }
+    let adProduct = {
+        tag,
+        brand,
+        price,
+        number,
+        img,
+        name,
+        description,
+        condition,
+        city,
+        user
     }
+    
     return (
         <div className='form-button'>
             <h2>POST YOUR AD</h2>
-            <FormSteps />
+            <CategorySelect
+                handleTag={handleTag}
+                nextForm={nextForm}
+                state={state}
+            />
+            <Form
+                prevForm={prevForm}
+                handleCondition={handleCondition}
+                handleprice={handleprice}
+                handleBrand={handleBrand}
+                handleuser={handleuser}
+                handlecity={handlecity}
+                handlenumber={handlenumber}
+                handlename={handlename}
+                handledescription={handledescription}
+                handleFile={handleFile}
+                brand={brand}
+                user={user}
+                description={description}
+                tag={tag}
+                price={price}
+                city={city}
+                number={number}
+                name={name}
+                condition={condition}
+                state={state}
+            />
             <div className='form-btn'>
                 {(state === 2) ? <button className='previous' onClick={prevForm}>Previous</button> : null}
-                {(state === 2) ? <button className='submit' onClick={()=> props.set_data(adProduct)}>POST AD</button> : null} 
+                {(state === 2) ? <button className='submit' onClick={() => {props.set_data(adProduct)}}>POST AD</button> : null}
             </div>
         </div>
     )

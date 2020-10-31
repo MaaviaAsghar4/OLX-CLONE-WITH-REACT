@@ -10,6 +10,10 @@ const CategorySelect = (props) => {
         props.handleTag(id)
         props.nextForm();
     }
+
+    if (props.state !== 1) {
+        return null
+    }
     return (
         <div className='category-container'>
             <span>CHOOSE A CATEGORY</span>
