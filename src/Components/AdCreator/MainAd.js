@@ -121,7 +121,7 @@ const MainAd = (props) => {
             <FormSteps />
             <div className='form-btn'>
                 {(state === 2) ? <button className='previous' onClick={prevForm}>Previous</button> : null}
-                {(state === 2) ? <button className='submit' onClick={()=> {props.set_data(adProduct); window.location.href='/'}}>POST AD</button> : null}
+                {(state === 2) ? <button className='submit' onClick={()=> props.set_data(adProduct)}>POST AD</button> : null} 
             </div>
         </div>
     )

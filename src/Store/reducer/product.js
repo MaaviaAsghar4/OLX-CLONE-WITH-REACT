@@ -79,6 +79,7 @@ const homeState = {
 
 
 export default (state = homeState, action) => {
+    console.log(action)
     switch (action.type) {
         case "SETDATA":
             return ({
