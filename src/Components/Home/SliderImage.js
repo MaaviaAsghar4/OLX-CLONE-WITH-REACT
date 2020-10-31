@@ -2,7 +2,7 @@ import React from 'react'
 // import Api from '../Api/Api.json'
 import './SliderImage.css'
 import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
+import { connect } from 'react-redux' 
 
 const SliderImage = (props) => {
     let dataApi = props.data
@@ -10,12 +10,12 @@ const SliderImage = (props) => {
         <div className='top'>
             <span>Based on your latest search</span>
             <div className='container_product'>
-                {Object.keys(dataApi).map((product, i) => {
-                    const apiItem = dataApi[product];
+                {dataApi.map((product, i) => {
+                    const apiItem = dataApi[i];
                     return (
                         <div className='featured_box' key={i}>
-                            <Link to={`/product/${product}`}>
-                                <img src={apiItem.img} height={200} alt='product' />
+                            <Link to={`/product/${i}`}>
+                                <img src={apiItem.img} height={200} width={200} alt='product' />
                                 <p className='left_content' style={{ fontWeight: 'bold', color: 'black' }}>{apiItem.price}</p>
                                 <p className='left_content' style={{ color: 'rgba(0,47,52,.64)' }}>{apiItem.name}</p>
                                 <div className='card_text'>

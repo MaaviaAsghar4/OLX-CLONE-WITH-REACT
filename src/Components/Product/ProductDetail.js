@@ -1,7 +1,7 @@
 import React from 'react'
 import './ProductDetail.css'
 // import Product from '../Api/Api.json'
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom' 
 import { connect } from 'react-redux'
 
 const ProductDetail = (props) => {
@@ -17,10 +17,10 @@ const ProductDetail = (props) => {
                     <img src={ApiItem.img} alt={ApiItem.name} />
                 </div>
                 <div className='product-list'>
-                    <img src={ApiItem.img} alt={ApiItem.name} height={150} />
-                    <img src={ApiItem.img} alt={ApiItem.name} height={150} />
-                    <img src={ApiItem.img} alt={ApiItem.name} height={150} />
-                    <img src={ApiItem.img} alt={ApiItem.name} height={150} />
+                    <img src={ApiItem.img} alt={ApiItem.name} height={150} width={150} />
+                    <img src={ApiItem.img} alt={ApiItem.name} height={150} width={150} />
+                    <img src={ApiItem.img} alt={ApiItem.name} height={150} width={150} />
+                    <img src={ApiItem.img} alt={ApiItem.name} height={150} width={150} />
                 </div>
             </div>
             <div>
@@ -44,7 +44,7 @@ const ProductDetail = (props) => {
             <div className='product-ad'>
                 <h3>Related Ads</h3>
                 <div className='ad-detail'>
-                    <img src={ApiItem.img} alt={ApiItem.name} height={250} />
+                    <img src={ApiItem.img} alt={ApiItem.name} height={250} width={250} />
                     <p>{ApiItem.price}</p>
                 </div>
             </div>

@@ -9,18 +9,19 @@ import './FeaturedComponent.css'
 const FeaturedComponent = (props) => {
     // console.log(props.data)
     // console.log(Object.keys(props.data))
-    // console.log(alter_data())
+    // console.log(alter_data()) 
     let dataApi = props.data
     return (
         <div className='top'>
             <span>FRESH REOMMENDATIONS</span>
             <div className='container-product'>
-                {Object.keys(dataApi).map((product, i) => {
-                    const apiItem = dataApi[product];
+                {dataApi.map((product, i) => {
+                    const apiItem = dataApi[i];
+                    console.log(apiItem)
                     return (
                         <div className='featured-box' key={i}>
-                            <Link to={`/product/${product}`}>
-                                <img src={apiItem.img} height={200} alt='product' />
+                            <Link to={`/product/${i}`}>
+                                <img src={apiItem.img} height={200} width={200} alt='product' />
                                 <p className='left-content' style={{ fontWeight: 'bold', color: 'black' }}>Rs. {apiItem.price}</p>
                                 <p className='left-content'>{apiItem.name}</p>
                                 <div className='card-text'>

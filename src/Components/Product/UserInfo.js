@@ -1,6 +1,6 @@
 import React from 'react'
 import './UserInfo.css'
-// import Product from '../Api/Api.json'
+// import Product from '../Api/Api.json' 
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 

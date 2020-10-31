@@ -6,10 +6,10 @@ import { connect } from 'react-redux'
 import { set_data } from '../../Store/action'
 
 const MainAd = (props) => {
-    props.set_data()
+    // props.set_data()
     let [state, setState] = useState(1);
     let [brand, setBrand] = useState('');
-    let [adTitle, setadTitle] = useState('');
+    let [user, setuser] = useState('');
     let [description, setdescription] = useState('');
     let [price, setprice] = useState('');
     let [city, setcity] = useState('');
@@ -17,6 +17,7 @@ const MainAd = (props) => {
     let [name, setname] = useState('');
     let [tag, setTag] = useState('');
     let [condition, setCondition] = useState('');
+    let [img, setimg] = useState('');
 
     let nextForm = () => {
         setState(prevState => prevState + 1)
@@ -38,8 +39,8 @@ const MainAd = (props) => {
         setBrand(e.target.value)
     }
 
-    let handleadTitle = e => {
-        setadTitle(e.target.value)
+    let handleuser = e => {
+        setuser(e.target.value)
     }
 
     let handleprice = e => {
@@ -62,18 +63,23 @@ const MainAd = (props) => {
         setcity(e.target.value)
     }
 
-    let adProduct = {
+    let handleFile = file => {
+        setimg(URL.createObjectURL(file))
+    }
+
+    let adProduct =  {
             tag,
             brand,
             price,
             number,
+            img,
             name,
             description,
             condition,
             city,
-            adTitle,
+            user
         }
-
+        console.log(img);
     const FormSteps = () => {
         if (state === 1) {
             return (
@@ -90,13 +96,14 @@ const MainAd = (props) => {
                     handleCondition={handleCondition}
                     handleprice={handleprice}
                     handleBrand={handleBrand}
-                    handleadTitle={handleadTitle}
+                    handleuser={handleuser}
                     handlecity={handlecity}
                     handlenumber={handlenumber}
                     handlename={handlename}
                     handledescription={handledescription}
+                    handleFile={handleFile}
                     brand={brand}
-                    adTitle={adTitle}
+                    user={user}
                     description={description}
                     tag={tag}
                     price={price}
@@ -114,7 +121,7 @@ const MainAd = (props) => {
             <FormSteps />
             <div className='form-btn'>
                 {(state === 2) ? <button className='previous' onClick={prevForm}>Previous</button> : null}
-                {(state === 2) ? <button className='submit' onClick={()=> props.set_data(adProduct)}>POST AD</button> : null}
+                {(state === 2) ? <button className='submit' onClick={()=> {props.set_data(adProduct); window.location.href='/'}}>POST AD</button> : null}
             </div>
         </div>
     )

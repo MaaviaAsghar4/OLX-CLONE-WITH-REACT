@@ -23,13 +23,13 @@ const Product = (props) => {
                 </div>
                 <div>
                     <div className='product-display'>
-                        {Object.keys(dataApi).map((product, i) => {
-                            const apiItem = dataApi[product];
+                        {dataApi.map((product, i) => {
+                            const apiItem = dataApi[i];
                             return (
                                 <div className='featured-display' key={i}>
-                                    <Link to={`/product/${product}`}>
-                                        <img src={apiItem.img} height={200} alt='product' />
-                                        <p className='align-left' style={{ fontWeight: 'bolder', color: "black"}}>Rs. {apiItem.price}</p>
+                                    <Link to={`/product/${i}`}>
+                                        <img src={apiItem.img} height={200} width={200} alt='product' />
+                                        <p className='align-left' style={{ fontWeight: 'bolder', color: "black" }}>Rs. {apiItem.price}</p>
                                         <p className='align-left' style={{ color: 'rgba(0,47,52,.64)' }}>{id} : {apiItem.name}</p>
                                         <div className='product-text'>
                                             <p>Karachi</p>
@@ -46,8 +46,8 @@ const Product = (props) => {
     )
 }
 
-const mapStateToProps = state =>({
+const mapStateToProps = state => ({
     data: state.products.data
 })
 
-export default connect(mapStateToProps,null)(Product)
+export default connect(mapStateToProps, null)(Product)

@@ -14,6 +14,12 @@ const Form = (props) => {
         props.handleCondition(id)
         setState(e.target.id)
     }
+
+    let loadFile = e => {
+        let file = e.target.files[0];
+        props.handleFile(file);
+    }
+
     return (
         <div className='main-form'>
             <div className='form-breadcrumb'>
@@ -29,7 +35,7 @@ const Form = (props) => {
                 <button id='New' onClick={getId} className={(state === "New") ? 'conditionBtn active' : 'conditionBtn'}>New</button>
                 <button id='Used' onClick={getId} className={(state === "Used") ? 'conditionBtn active' : 'conditionBtn'}>Used</button><br />
                 <label htmlFor='title'> Ad title* <br /></label>
-                <input type='text' name='adTitle' value={props.adTitle} onChange={e => { props.handleadTitle(e) }} /><br />
+                <input type='text' name='adTitle' value={props.name} onChange={e => { props.handlename(e) }} /><br />
                 <p>Mention the key features of your item (e.g. brand, model, age, type)</p>
                 <label htmlFor='description'> Description* <br /></label>
                 <textarea type='text' rows="5" cols='50' name='desctiption' value={props.description} onChange={e => { props.handledescription(e) }} />
@@ -42,7 +48,7 @@ const Form = (props) => {
             </div>
             <div className='form-photo'>
                 <h3>UPLOAD PHOTOS</h3>
-                <input type='file' multiple accept='image/*' />
+                <input type='file' accept='image/*' onChange={loadFile} />
             </div>
             <div className='form-location'>
                 <h3>CONFIRM YOUR LOCATION</h3>
@@ -53,7 +59,7 @@ const Form = (props) => {
                 <h3>REVIEW YOUR DETAILS</h3>
                 <img src={Image} alt='' /><br />
                 <label htmlFor='name'>Name*</label><br />
-                <input type='text' name='name' value={props.name} onChange={e => { props.handlename(e) }} /><br />
+                <input type='text' name='name' value={props.user} onChange={e => { props.handleuser(e) }} /><br />
                 <label htmlFor='number'>Mobile Phone Number*</label><br />
                 <input type='number' name='number' value={props.number} onChange={e => { props.handlenumber(e) }} />
             </div>

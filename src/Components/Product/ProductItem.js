@@ -3,15 +3,19 @@ import { useParams, Link } from 'react-router-dom'
 import ProductDetail from './ProductDetail'
 import UserInfo from './UserInfo'
 import './ProductItem.css'
+import { connect } from 'react-redux'
 
-const ProductItem = () => {
+
+const ProductItem = (props) => {
+    const dataApi = props.data
     const { id } = useParams()
-    console.log(id)
+    const ApiItem = dataApi[id];
+
     return (
         <div>
             <div className='breadcrumb'>
                 <span>{<Link to='/'>Home</Link>}/</span>
-                <span><Link to={{ id }}>{id}</Link></span>
+                <span><Link to={{ id }}>{ApiItem.name}</Link></span>
             </div>
             <div className='product-info'>
                 <ProductDetail />
@@ -21,4 +25,8 @@ const ProductItem = () => {
     )
 }
 
-export default ProductItem
+const mapStateToProps = state => ({
+    data: state.products.data
+})
+
+export default connect(mapStateToProps,null)(ProductItem)

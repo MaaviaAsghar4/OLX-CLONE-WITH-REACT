@@ -19,7 +19,7 @@ const Navbar = () => {
                 <button>Login</button>
             </div>
             <div className='sell'>
-                <Link to='/post'>SELL</Link>
+                <Link to='/ad/post'>SELL</Link>
             </div>
         </div>
     )
