@@ -1,12 +1,12 @@
 const categoryState = {
     list: [
-        "Mobile-Phones",
+        "Mobile_Phones",
         "Cars",
         "Motorcycles",
         "Houses",
-        "TV-Video-Audio",
+        "TV_Video_Audio",
         "Tablets",
-        "Plots-&-Lands",
+        "Plots_and_Lands",
     ]
 }
 

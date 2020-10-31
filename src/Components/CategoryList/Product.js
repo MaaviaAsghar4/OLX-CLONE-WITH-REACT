@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 const Product = (props) => {
     const { id } = useParams();
-    let dataApi = props.data
+    let dataApi = props[id]
     return (
         <div className='product-sidebar'>
             <div>
@@ -47,7 +47,13 @@ const Product = (props) => {
 }
 
 const mapStateToProps = state => ({
-    data: state.products.data
+    Mobile_Phones: state.products.Mobile_Phones,
+    Cars: state.products.Cars,
+    Motorcycles: state.products.Motorcycles,
+    Houses: state.products.Houses,
+    TV_Video_Audio: state.products.TV_Video_Audio,
+    Tablets: state.products.Tablets,
+    Plots_and_Lands: state.products.Plots_and_Lands,
 })
 
 export default connect(mapStateToProps, null)(Product)
