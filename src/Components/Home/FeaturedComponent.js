@@ -17,7 +17,6 @@ const FeaturedComponent = (props) => {
             <div className='container-product'>
                 {dataApi.map((product, i) => {
                     const apiItem = dataApi[i];
-                    console.log(apiItem)
                     return (
                         <div className='featured-box' key={i}>
                             <Link to={`/product/${i}`}>

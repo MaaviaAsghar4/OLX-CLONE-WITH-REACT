@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import { set_data } from '../../Store/action'
 
 const MainAd = (props) => {
-    // props.set_data()
     let [state, setState] = useState(1);
     let [brand, setBrand] = useState('');
     let [user, setuser] = useState('');

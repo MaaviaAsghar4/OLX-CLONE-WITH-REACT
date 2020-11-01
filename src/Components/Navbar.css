@@ -42,6 +42,27 @@
     text-decoration: none;
 }
 
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.disabled{
+    border: none;
+    background-color: #f7f7f7;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.disabled:focus{
+    outline: none;
+}
+
+.login button:focus{
+    outline: none;
+}
+
 .sell {
     border-bottom: 3px solid yellow;
     border-top: 3px solid blue;

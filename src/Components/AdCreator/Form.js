@@ -1,9 +1,16 @@
 import React, { useState } from 'react'
 import './Form.css'
 import Image from '../../images/images.png'
+import { connect } from 'react-redux';
+
 
 const Form = (props) => {
     let [state, setState] = useState('')
+    let user = props.user;
+    let isLogged = false
+    if(user.displayName) {
+        isLogged = true
+    }
     let stateChange = () => {
         props.prevForm()
     }
@@ -60,9 +67,9 @@ const Form = (props) => {
             </div>
             <div className='form-user'>
                 <h3>REVIEW YOUR DETAILS</h3>
-                <img src={Image} alt='' /><br />
+                <img src={isLogged? user.photoURL: Image} alt='' /><br />
                 <label htmlFor='name'>Name*</label><br />
-                <input type='text' name='name' value={props.user} onChange={props.handleuser} /><br />
+                <input type='text' name='name' value={user.displayName} onChange={props.handleuser} /><br />
                 <label htmlFor='number'>Mobile Phone Number*</label><br />
                 <input type='number' name='number' value={props.number} onChange={props.handlenumber} />
             </div>
@@ -70,4 +77,8 @@ const Form = (props) => {
     )
 }
 
-export default Form
+const mapStateToProps = state => ({
+    user: state.authentication.user
+})
+
+export default connect(mapStateToProps,null)(Form)
