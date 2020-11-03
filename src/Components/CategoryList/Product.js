@@ -32,7 +32,7 @@ const Product = (props) => {
                                         <p className='align-left' style={{ fontWeight: 'bolder', color: "black" }}>Rs. {apiItem.price}</p>
                                         <p className='align-left' style={{ color: 'rgba(0,47,52,.64)' }}>{id} : {apiItem.name}</p>
                                         <div className='product-text'>
-                                            <p>Karachi</p>
+                                            <p>{apiItem.city}</p>
                                             <p>Today</p>
                                         </div>
                                     </Link>
@@ -42,7 +42,7 @@ const Product = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     )
 }
 

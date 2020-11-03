@@ -27,12 +27,12 @@ const ProductDetail = (props) => {
                 <div className='product-detail'>
                     <h3>Details</h3>
                     <div className='product-flex'>
-                        <p className='shade-color'>Area Unit</p>
-                        <p >Square Feet</p>
-                        <p className='shade-color'>Area</p>
-                        <p>1121</p>
-                        <p className='shade-color'>Area</p>
-                        <p>1121</p>
+                        <p className='shade-color'>Brand</p>
+                        <p>{ApiItem.brand}</p>
+                        <p className='shade-color'>Tag</p>
+                        <p>{ApiItem.tag}</p>
+                        <p className='shade-color'>Condition</p>
+                        <p>{ApiItem.condition}</p>
                     </div>
                     <hr />
                     <h3>Description</h3>

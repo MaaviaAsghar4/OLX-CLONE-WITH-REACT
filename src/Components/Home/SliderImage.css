@@ -54,7 +54,7 @@
 .card_text{
     display: flex;
     color: rgba(0,47,52,.64);
-    margin-top: 0 !important;
+    margin-top: -20px !important;
     padding: 0 5px;
     justify-content: space-between;
 }

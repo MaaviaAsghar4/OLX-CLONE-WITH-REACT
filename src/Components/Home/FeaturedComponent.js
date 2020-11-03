@@ -24,7 +24,7 @@ const FeaturedComponent = (props) => {
                                 <p className='left-content' style={{ fontWeight: 'bold', color: 'black' }}>Rs. {apiItem.price}</p>
                                 <p className='left-content'>{apiItem.name}</p>
                                 <div className='card-text'>
-                                    <p>Karachi</p>
+                                    <p>{apiItem.city}</p>
                                     <p>Today</p>
                                 </div>
                             </Link>
@@ -32,7 +32,7 @@ const FeaturedComponent = (props) => {
                     )
                 })}
 
-            </div>
+            </div> 
         </div>
     )
 }

@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { set_data } from '../../Store/action'
 
 const MainAd = (props) => {
+    let Person = props.user;
     let [state, setState] = useState(1);
     let [brand, setBrand] = useState('');
     let [user, setuser] = useState('');
@@ -78,6 +79,8 @@ const MainAd = (props) => {
         brand,
         price,
         number,
+        photo: Person.photoURL,
+        uid: Person.uid,
         img,
         name,
         description,
@@ -128,4 +131,9 @@ const mapDispatchToProps = dispatch => ({
     set_data: (adProduct) => dispatch(set_data(adProduct))
 })
 
-export default connect(null, mapDispatchToProps)(MainAd)
+const mapStateToProps = state => ({
+    user: state.authentication.user
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainAd)
+ 

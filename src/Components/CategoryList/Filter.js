@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 
 const Filter = () => {
     const { id } = useParams();
-    // console.log(id)
+    // console.log(id) 
 
     return (
         <div className='sidebar'>
@@ -22,12 +22,11 @@ const Filter = () => {
             <div className='sidebar-location'>
                 <h3>LOCATIONS</h3>
                 <p className='sidebar-header'>Pakistan</p>
-                <p>Punjab (1234)</p>
-                <p>Sindh (1234)</p>
-                <p>Khyber Pakhtunkhwa (1234)</p>
-                <p>Islamabad Capital Territory (1234)</p>
-                <p>Balochistan (1234)</p>
-                <p>View more</p>
+                <p>Punjab</p>
+                <p>Sindh</p>
+                <p>Khyber Pakhtunkhwa</p>
+                <p>Islamabad Capital Territory</p>
+                <p>Balochistan</p>
                 <hr />
             </div>
             <div className='sidebar-price'>

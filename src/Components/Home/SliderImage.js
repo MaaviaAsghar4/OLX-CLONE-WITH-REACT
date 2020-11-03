@@ -19,7 +19,7 @@ const SliderImage = (props) => {
                                 <p className='left_content' style={{ fontWeight: 'bold', color: 'black' }}>{apiItem.price}</p>
                                 <p className='left_content' style={{ color: 'rgba(0,47,52,.64)' }}>{apiItem.name}</p>
                                 <div className='card_text'>
-                                    <p>Karachi</p>
+                                    <p>{apiItem.city}</p>
                                     <p>Today</p>
                                 </div>
                             </Link>
@@ -28,7 +28,7 @@ const SliderImage = (props) => {
                 })}
 
             </div>
-        </div>
+        </div> 
     )
 }
 

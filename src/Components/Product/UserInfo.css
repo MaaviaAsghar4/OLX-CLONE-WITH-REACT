@@ -32,7 +32,24 @@
     cursor: pointer;
 }
 
-.user-description button:hover{
+.user-photo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding-right: 10px;
+}
+
+.user-flex {
+    display: flex;
+    align-items: center;
+}
+
+.user-chat{
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+.user-chat button:hover{
     background-color: #f7f7f7;
     color: #002f34;
 
