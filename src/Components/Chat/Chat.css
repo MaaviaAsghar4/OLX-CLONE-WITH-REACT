@@ -75,6 +75,12 @@
     box-shadow: 0 0 10px gray;
 }
 
+.messages-place{
+    height: 50vh;
+    overflow-y: auto;
+    width: 100%;
+}
+
 .message-flex {
     padding-left: 0;
 }

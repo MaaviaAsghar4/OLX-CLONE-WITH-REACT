@@ -9,7 +9,6 @@ import { connect } from 'react-redux';
 
 const Navbar = (props) => {
     let user = props.user;
-    console.log(user)
     let isLogged = false
     // let [isLogged, setLogged] = useState(false)
     // if(user) {

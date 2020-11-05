@@ -15,7 +15,7 @@ const UserInfo = (props) => {
     }
 
     let login = () => {
-        alert("Please Login to Create Ad")
+        alert("Please Login to Chat with user")
     }
 
     return (

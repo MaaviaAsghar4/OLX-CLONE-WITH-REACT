@@ -46,29 +46,9 @@ const sign_out = () => {
 
 }
 
-const chat_data = (uid1, uid2, chat) => {
-    return dispatch => {
-        let mergerUid = ''
-        if (uid1 > uid2) {
-            mergerUid = uid1 + uid2
-        } else {
-            mergerUid = uid2 + uid1
-        }
-        firebase.database().ref('/').child(mergerUid).on('child_added', senderDetail => {
-            let senderInfo = []
-            senderInfo.push(senderDetail.val())
-            dispatch({ type: "SetChat", senderDetail: senderInfo })
-        })
-        let key = firebase.database().ref(mergerUid).push().key;
-        chat.key = key;
-        firebase.database().ref(`${mergerUid}`).child(key).set(chat)
-    }
-}
-
 export {
     alter_data,
     set_data,
     auth_data,
     sign_out,
-    chat_data
 }
